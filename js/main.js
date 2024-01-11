@@ -1,23 +1,28 @@
-// main section
+//  home page
+
 let main = document.createElement("main"),
-    left = document.createElement("section"),
+    left = document.createElement("div"),
     div = document.createElement("div"),
     img = document.createElement("img");
     span = document.createElement("span"),
     spanTextNode = document.createTextNode("Make Burger"),
     divTextNode = document.createTextNode("Make Your Burger");
 
-// append elements
-main.appendChild(left)
+// append elements ( home page)
+
+main.append(left , img , span);
 left.appendChild(div);
 div.appendChild(divTextNode)
-main.appendChild(img);
-img.setAttribute("src", "../images/main-img.png");
-main.appendChild(span);
 span.appendChild(spanTextNode);
 document.body.appendChild(main);
 
-// style main section
+// set Attributes ( home page)
+
+img.setAttribute("src", "../images/main-img.png");
+left.classList.add("left");
+
+// style home page
+
 function styleInject(cssText) {
     const head = document.head;
     const style = document.createElement("style");
@@ -25,6 +30,7 @@ function styleInject(cssText) {
     head.appendChild(style);
 }
 // insert the css styles
+
 styleInject(`
   *{
     margin:0;
@@ -36,7 +42,7 @@ styleInject(`
     display:flex;
     justify-content:space-between;
   }
-  section{
+  .left{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,7 +80,59 @@ styleInject(`
   }
   `);
 
+// cocking page
+
+let mainSection = document.createElement("section"),
+    hOne = document.createElement("h1"),
+    hOneTextNode = document.createTextNode("Make Your Burger")
+    cock = document.createElement("div"),
+    details = document.createElement("div");
+
+// append elements (cocking page)
+
+document.body.appendChild(mainSection);
+mainSection.classList.add("main-section");
+mainSection.append(hOne , cock , details);
+hOne.appendChild(hOneTextNode)
+
+// set Attributes ( cocking page)
+
+cock.classList.add("cock")
+details.classList.add("details")
+
+// style cocking page
+
+styleInject(`
+.main-section{
+    display:none;
+    width:90%;
+    height:75vh;
+    grid-template-columns: 20% 50% 25%;
+    padding: 2% 5% 0 5%;
+    justify-content:space-between;
+    align-items:center;
+}
+h1,.cock,.details{
+    background: red;
+}
+`)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //   event
 span.addEventListener("click",()=>{
-    main.style.display = "none"
+    main.style.display = "none";
+    mainSection.style.display = "grid"
 })
