@@ -88,6 +88,10 @@ let mainSection = document.createElement("section"),
     hOneTextNode = document.createTextNode("Make Your Burger"),
     cock = document.createElement("div"),
     details = document.createElement("div"),
+    sum = document.createElement("p"),
+    calc =document.createElement("div"),
+    numb = document.createElement("div"),
+    checkout = document.createElement("div");
 
     // control section
 
@@ -135,14 +139,17 @@ mainSection.append(make, cock, details);
 make.appendChild(hOne);
 hOne.appendChild(hOneTextNode);
 document.body.appendChild(controlSection);
-
+calc.append(numb , checkout)
+details.append(sum ,calc)
 // set Attributes ( cocking page)
 
 make.classList.add("make");
 cock.classList.add("cock");
 details.classList.add("details");
 controlSection.classList.add("control");
-
+sum.innerText = "Summary";
+numb.innerText = "$0.00";
+checkout.innerText = "Checkout";
 // style cocking page
 
 styleInject(`
@@ -197,7 +204,6 @@ h1{
     border-radius: 99px;
     background:#F5F5FF;
     cursor: pointer;
-
 }
 .control>div>div>p{
     color: #1F2939;
@@ -205,7 +211,6 @@ h1{
     font-weight: 600;
     line-height: 32px;
     margin: 0 10%;
-
 }
 .btns{
     display:flex;
