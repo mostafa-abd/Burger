@@ -141,6 +141,7 @@ hOne.appendChild(hOneTextNode);
 document.body.appendChild(controlSection);
 calc.append(numb , checkout)
 details.append(sum ,calc)
+
 // set Attributes ( cocking page)
 
 make.classList.add("make");
@@ -150,6 +151,7 @@ controlSection.classList.add("control");
 sum.innerText = "Summary";
 numb.innerText = "$0.00";
 checkout.innerText = "Checkout";
+
 // style cocking page
 
 styleInject(`
