@@ -86,40 +86,47 @@ let mainSection = document.createElement("section"),
     make = document.createElement("div"),
     hOne = document.createElement("h1"),
     hOneTextNode = document.createTextNode("Make Your Burger"),
-cock = document.createElement("div"),
+    cock = document.createElement("div"),
     details = document.createElement("div"),
 
     // control section
 
     controlSection = document.createElement("section"),
-    images = ["../images/cutlet.png" ,"../images/mayo.png" , "../images/onion.png", "../images/tomatoe.png", "../images/cucumber.png","../images/cheese.png" ,"../images/salad.png" ];
+    images = ["../images/cutlet.png", "../images/mayo.png", "../images/onion.png", "../images/tomatoe.png", "../images/cucumber.png", "../images/cheese.png", "../images/salad.png"];
 
 
-    for (var i = 0; i < images.length ; i++) {
+for (var i = 0; i < images.length; i++) {
 
-        // creat element
+    // creat element
 
-        let controlImages = document.createElement("img"),
-            plus = document.createElement("button"),
-            p = document.createElement("p"),
-            min = document.createElement("button");
+    let controlImages = document.createElement("img"),
+        plus = document.createElement("button"),
+        p = document.createElement("p"),
+        min = document.createElement("button"),
+        contain = document.createElement("div"),
+        btns =document.createElement("div");
 
-            // set Attributes & append element
+    controlImages.src = images[i]
 
-        controlImages.src = images[i]
-        controlSection.appendChild(controlImages)
+    plus.innerText = '+';
 
-        plus.innerText = '+' ;
-        controlSection.appendChild(plus);
+    p.innerText = "0"
 
-        p.innerText = "0"
-        controlSection.appendChild(p);
+    min.innerText = '-';
 
-        min.innerText = '-' ;
-        controlSection.appendChild(min);
+    // append element
 
-    }
-    
+    btns.append(plus , p ,min );
+    contain.append(controlImages , btns);
+
+    // set Attributes 
+
+    contain.classList.add("contain");
+    btns.classList.add("btns");
+
+    controlSection.appendChild(contain)
+}
+
 // append elements (cocking page)
 
 document.body.appendChild(mainSection);
@@ -162,22 +169,49 @@ h1{
     line-height: 50px;
 }
 .cock{
- background-image:url(../images/burger.png);
- height:100%;
- background-repeat: no-repeat;
- background-size: 80%;
- background-position: center;
+    background-image:url(../images/burger.png);
+    height:100%;
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
 }
 .details{
     background:red;
     height:100%
 }
 .control{
-    background:yellow;
     width: 94%;
-    height: 15vh;
+    height: 13vh;
     padding: 0% 3%;
     display:none;
+    margin-top: 1%;
+}
+.control>div>img{
+    width: 104px;
+    height: 49px;
+}
+.control>div>div>button{
+    width:28px;
+    height:28px;
+    border:0;
+    border-radius: 99px;
+    background:#F5F5FF;
+    cursor: pointer;
+
+}
+.control>div>div>p{
+    color: #1F2939;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 32px;
+    margin: 0 10%;
+
+}
+.btns{
+    display:flex;
+}
+.contain{
+    width: 15%;
 }
 `)
 
@@ -199,5 +233,5 @@ h1{
 span.addEventListener("click", () => {
     main.style.display = "none";
     mainSection.style.display = "grid"
-    controlSection.style.display = "grid"
+    controlSection.style.display = "flex"
 })
