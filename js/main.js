@@ -4,13 +4,13 @@ let main = document.createElement("main"),
     left = document.createElement("div"),
     div = document.createElement("div"),
     img = document.createElement("img");
-    span = document.createElement("span"),
+span = document.createElement("span"),
     spanTextNode = document.createTextNode("Make Burger"),
     divTextNode = document.createTextNode("Make Your Burger");
 
 // append elements ( home page)
 
-main.append(left , img , span);
+main.append(left, img, span);
 left.appendChild(div);
 div.appendChild(divTextNode)
 span.appendChild(spanTextNode);
@@ -47,7 +47,7 @@ styleInject(`
     align-items: center;
     justify-content: center;
   }
-  div{
+  .left > div{
     width:45%;
     height:auto;
     color: #1F2939;
@@ -83,37 +83,101 @@ styleInject(`
 // cocking page
 
 let mainSection = document.createElement("section"),
+    make = document.createElement("div"),
     hOne = document.createElement("h1"),
-    hOneTextNode = document.createTextNode("Make Your Burger")
-    cock = document.createElement("div"),
-    details = document.createElement("div");
+    hOneTextNode = document.createTextNode("Make Your Burger"),
+cock = document.createElement("div"),
+    details = document.createElement("div"),
 
+    // control section
+
+    controlSection = document.createElement("section"),
+    images = ["../images/cutlet.png" ,"../images/mayo.png" , "../images/onion.png", "../images/tomatoe.png", "../images/cucumber.png","../images/cheese.png" ,"../images/salad.png" ];
+
+
+    for (var i = 0; i < images.length ; i++) {
+
+        // creat element
+
+        let controlImages = document.createElement("img"),
+            plus = document.createElement("button"),
+            p = document.createElement("p"),
+            min = document.createElement("button");
+
+            // set Attributes & append element
+
+        controlImages.src = images[i]
+        controlSection.appendChild(controlImages)
+
+        plus.innerText = '+' ;
+        controlSection.appendChild(plus);
+
+        p.innerText = "0"
+        controlSection.appendChild(p);
+
+        min.innerText = '-' ;
+        controlSection.appendChild(min);
+
+    }
+    
 // append elements (cocking page)
 
 document.body.appendChild(mainSection);
 mainSection.classList.add("main-section");
-mainSection.append(hOne , cock , details);
-hOne.appendChild(hOneTextNode)
+mainSection.append(make, cock, details);
+make.appendChild(hOne);
+hOne.appendChild(hOneTextNode);
+document.body.appendChild(controlSection);
 
 // set Attributes ( cocking page)
 
-cock.classList.add("cock")
-details.classList.add("details")
+make.classList.add("make");
+cock.classList.add("cock");
+details.classList.add("details");
+controlSection.classList.add("control");
 
 // style cocking page
 
 styleInject(`
 .main-section{
     display:none;
-    width:90%;
-    height:75vh;
-    grid-template-columns: 20% 50% 25%;
-    padding: 2% 5% 0 5%;
+    width: 94%;
+    height: 80vh;
+    grid-template-columns: 18% 50% 28%;
+    padding: 2% 3% 0 3%;
     justify-content:space-between;
     align-items:center;
 }
-h1,.cock,.details{
-    background: red;
+.make{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    width:45%;
+    height:auto;
+    color: #1F2939;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 50px;
+}
+.cock{
+ background-image:url(../images/burger.png);
+ height:100%;
+ background-repeat: no-repeat;
+ background-size: 80%;
+ background-position: center;
+}
+.details{
+    background:red;
+    height:100%
+}
+.control{
+    background:yellow;
+    width: 94%;
+    height: 15vh;
+    padding: 0% 3%;
+    display:none;
 }
 `)
 
@@ -132,7 +196,8 @@ h1,.cock,.details{
 
 
 //   event
-span.addEventListener("click",()=>{
+span.addEventListener("click", () => {
     main.style.display = "none";
     mainSection.style.display = "grid"
+    controlSection.style.display = "grid"
 })
