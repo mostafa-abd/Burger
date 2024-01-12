@@ -224,9 +224,106 @@ h1{
 
 
 
+// loading
 
+let loader = document.createElement("div"),
+    loading = document.createElement("div");
 
+// append
+loader.appendChild(loading);
+document.body.appendChild(loader)
 
+// set Attribute
+loader.classList.add("restaurant-loader")
+loading.classList.add("restaurant-loader-inner")
+
+// style for loading page
+
+styleInject(`
+.restaurant-loader {
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    padding: 2%;
+    top:40%;
+    left:40%;
+    background-color: #fff;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 100%;
+    display:none;
+  }
+  .restaurant-loader .restaurant-loader-inner {
+    width: 100%;
+    height: 100%;
+    animation: restaurant-loader-spin 0.5s linear infinite;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    border: 3px solid transparent;
+    border-right-color: #ff7900;
+    border-left-color: #ff7900;
+    border-radius: 50%;
+    content: "";
+  }
+  .restaurant-loader:before, .restaurant-loader:after {
+    content: "";
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .restaurant-loader:before {
+    background-image: url("https://i.imgur.com/Nc4xNES.png");
+    height: 35%;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-name: restaurant-loader-pot;
+  }
+  .restaurant-loader:after {
+    background-image: url("https://i.imgur.com/lNXd2Lr.png");
+    height: 65%;
+  }
+  
+  @keyframes restaurant-loader-pot {
+    from, 45%, 55%, 65%, 75%, 80%, 85%, to {
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    0% {
+      transform: rotate(0);
+    }
+    45% {
+      transform: translate3d(-4%, -13%, 0) rotate(-13deg);
+    }
+    55% {
+      transform: translate3d(1%, -2%, 0) rotate(6deg);
+    }
+    65% {
+      transform: translate3d(-2%, -4%, 0) rotate(-3deg);
+    }
+    75% {
+      transform: translate3d(2%, 3%, 0) rotate(3deg);
+    }
+    80% {
+      transform: translate3d(-2%, 1%, 0) rotate(-2deg);
+    }
+    to {
+      transform: none;
+    }
+  }
+  @keyframes restaurant-loader-spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(359deg);
+    }
+  }
+`)
 
 
 
@@ -239,6 +336,13 @@ h1{
 //   event
 span.addEventListener("click", () => {
     main.style.display = "none";
-    mainSection.style.display = "grid"
-    controlSection.style.display = "flex"
+    setTimeout(() => {
+        loader.style.display = "inline"
+    },0);
+// setTimeout(() => {
+//     loader.style.display = "none"
+//     mainSection.style.display = "grid"
+//     controlSection.style.display = "flex"
+// }, 2000);
+  
 })
