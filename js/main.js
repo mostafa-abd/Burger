@@ -279,7 +279,7 @@ styleInject(`
   .restaurant-loader:before {
     background-image: url("../images/Nc4xNES.png");
     height: 35%;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-fill-mode: both;
     animation-iteration-count: infinite;
     animation-name: restaurant-loader-pot;
