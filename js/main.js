@@ -339,10 +339,10 @@ span.addEventListener("click", () => {
     setTimeout(() => {
         loader.style.display = "inline"
     },0);
-// setTimeout(() => {
-//     loader.style.display = "none"
-//     mainSection.style.display = "grid"
-//     controlSection.style.display = "flex"
-// }, 2000);
+setTimeout(() => {
+    loader.style.display = "none"
+    mainSection.style.display = "grid"
+    controlSection.style.display = "flex"
+}, 2000);
   
 })
