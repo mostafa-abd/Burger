@@ -184,10 +184,6 @@ h1{
     background-size: 80%;
     background-position: center;
 }
-.details{
-    background:red;
-    height:100%
-}
 .control{
     width: 94%;
     height: 13vh;
@@ -219,6 +215,40 @@ h1{
 }
 .contain{
     width: 15%;
+}
+.details{
+    height:50%;
+}
+.details>p{
+    color:#1F2939;
+font-size: 36px;
+font-weight: 600;
+height:30%;
+}
+.details>div{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.details>div>div:first-child{
+    color:#5243C2;
+font-size: 36px;
+font-weight: 800;
+}
+.details>div>div:last-child{
+    display: flex;
+    width: 192px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 99px;
+    background:#5243C2;
+    padding: 16px;
+    color: #F5F5FF;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    cursor: pointer;
+
 }
 `)
 
