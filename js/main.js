@@ -277,7 +277,7 @@ styleInject(`
     background-position: center center;
   }
   .restaurant-loader:before {
-    background-image: url("https://i.imgur.com/Nc4xNES.png");
+    background-image: url("../images/Nc4xNES.png");
     height: 35%;
     animation-duration: 2s;
     animation-fill-mode: both;
@@ -285,7 +285,7 @@ styleInject(`
     animation-name: restaurant-loader-pot;
   }
   .restaurant-loader:after {
-    background-image: url("https://i.imgur.com/lNXd2Lr.png");
+    background-image: url("../images/lNXd2Lr.png");
     height: 65%;
   }
   
@@ -343,6 +343,6 @@ setTimeout(() => {
     loader.style.display = "none"
     mainSection.style.display = "grid"
     controlSection.style.display = "flex"
-}, 2000);
+}, 3000);
   
 })
