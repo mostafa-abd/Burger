@@ -183,6 +183,11 @@ h1{
     background-repeat: no-repeat;
     background-size: 80%;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 130px;
 }
 .control{
     width: 94%;
@@ -248,9 +253,36 @@ font-weight: 800;
     font-weight: 600;
     line-height: 20px;
     cursor: pointer;
+}
+.cock-img{
+    width: 65%;
+    height: 90px;
+    animation : topbottom 3s ;
+}
+@keyframes topbottom {
+from{
+    transform: translateY(-350px);
 
 }
+to{
+    transform: translateY(0px);
+
+}
+}
 `)
+
+// plus
+document.querySelectorAll("button")[0].addEventListener("click" , ()=>{
+    let cut = document.createElement("img")
+    cut.src = "../images/cutlet.png"
+    cut.classList.add("cock-img")
+    cock.append(cut)
+
+    document.querySelectorAll("button")[1].addEventListener("click" , ()=>{
+        cut.style.display = "none"
+    
+    })
+})
 
 
 
@@ -366,13 +398,13 @@ styleInject(`
 //   event
 span.addEventListener("click", () => {
     main.style.display = "none";
-    setTimeout(() => {
-        loader.style.display = "inline"
-    },0);
+    // setTimeout(() => {
+    //     loader.style.display = "inline"
+    // },0);
 setTimeout(() => {
     loader.style.display = "none"
     mainSection.style.display = "grid"
     controlSection.style.display = "flex"
-}, 3000);
+}, 0);
   
 })
