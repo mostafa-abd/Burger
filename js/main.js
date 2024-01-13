@@ -1,18 +1,18 @@
 //  home page
 
 let main = document.createElement("main"),
-    left = document.createElement("div"),
-    div = document.createElement("div"),
-    img = document.createElement("img");
-span = document.createElement("span"),
-    spanTextNode = document.createTextNode("Make Burger"),
-    divTextNode = document.createTextNode("Make Your Burger");
+  left = document.createElement("div"),
+  div = document.createElement("div"),
+  img = document.createElement("img");
+(span = document.createElement("span")),
+  (spanTextNode = document.createTextNode("Make Burger")),
+  (divTextNode = document.createTextNode("Make Your Burger"));
 
 // append elements ( home page)
 
 main.append(left, img, span);
 left.appendChild(div);
-div.appendChild(divTextNode)
+div.appendChild(divTextNode);
 span.appendChild(spanTextNode);
 document.body.appendChild(main);
 
@@ -24,10 +24,10 @@ left.classList.add("left");
 // style home page
 
 function styleInject(cssText) {
-    const head = document.head;
-    const style = document.createElement("style");
-    style.appendChild(document.createTextNode(cssText));
-    head.appendChild(style);
+  const head = document.head;
+  const style = document.createElement("style");
+  style.appendChild(document.createTextNode(cssText));
+  head.appendChild(style);
 }
 // insert the css styles
 
@@ -83,52 +83,58 @@ styleInject(`
 // cocking page
 
 let mainSection = document.createElement("section"),
-    make = document.createElement("div"),
-    hOne = document.createElement("h1"),
-    hOneTextNode = document.createTextNode("Make Your Burger"),
-    cock = document.createElement("div"),
-    details = document.createElement("div"),
-    sum = document.createElement("p"),
-    calc =document.createElement("div"),
-    numb = document.createElement("div"),
-    checkout = document.createElement("div");
+  make = document.createElement("div"),
+  hOne = document.createElement("h1"),
+  hOneTextNode = document.createTextNode("Make Your Burger"),
+  cock = document.createElement("div"),
+  details = document.createElement("div"),
+  sum = document.createElement("p"),
+  calc = document.createElement("div"),
+  numb = document.createElement("div"),
+  checkout = document.createElement("div");
 
-    // control section
+// control section
 
-    controlSection = document.createElement("section"),
-    images = ["../images/cutlet.png", "../images/mayo.png", "../images/onion.png", "../images/tomatoe.png", "../images/cucumber.png", "../images/cheese.png", "../images/salad.png"];
-
+(controlSection = document.createElement("section")),
+  (images = [
+    "../images/cutlet.png",
+    "../images/mayo.png",
+    "../images/onion.png",
+    "../images/tomatoe.png",
+    "../images/cucumber.png",
+    "../images/cheese.png",
+    "../images/salad.png",
+  ]);
 
 for (var i = 0; i < images.length; i++) {
+  // creat element
 
-    // creat element
+  let controlImages = document.createElement("img"),
+    plus = document.createElement("button"),
+    p = document.createElement("p"),
+    min = document.createElement("button"),
+    contain = document.createElement("div"),
+    btns = document.createElement("div");
 
-    let controlImages = document.createElement("img"),
-        plus = document.createElement("button"),
-        p = document.createElement("p"),
-        min = document.createElement("button"),
-        contain = document.createElement("div"),
-        btns =document.createElement("div");
+  controlImages.src = images[i];
 
-    controlImages.src = images[i]
+  plus.innerText = "+";
 
-    plus.innerText = '+';
+  p.innerText = "0";
 
-    p.innerText = "0"
+  min.innerText = "-";
 
-    min.innerText = '-';
+  // append element
 
-    // append element
+  btns.append(plus, p, min);
+  contain.append(controlImages, btns);
 
-    btns.append(plus , p ,min );
-    contain.append(controlImages , btns);
+  // set Attributes
 
-    // set Attributes 
+  contain.classList.add("contain");
+  btns.classList.add("btns");
 
-    contain.classList.add("contain");
-    btns.classList.add("btns");
-
-    controlSection.appendChild(contain)
+  controlSection.appendChild(contain);
 }
 
 // append elements (cocking page)
@@ -139,8 +145,8 @@ mainSection.append(make, cock, details);
 make.appendChild(hOne);
 hOne.appendChild(hOneTextNode);
 document.body.appendChild(controlSection);
-calc.append(numb , checkout)
-details.append(sum ,calc)
+calc.append(numb, checkout);
+details.append(sum, calc);
 
 // set Attributes ( cocking page)
 
@@ -269,35 +275,33 @@ to{
 
 }
 }
-`)
-
+`);
+let cut = document.createElement("img");
+cut.classList.add("cock-img");
 // plus
-document.querySelectorAll("button")[0].addEventListener("click" , ()=>{
-    let cut = document.createElement("img")
-    cut.src = "../images/cutlet.png"
-    cut.classList.add("cock-img")
-    cock.append(cut)
-
-    document.querySelectorAll("button")[1].addEventListener("click" , ()=>{
-        cut.style.display = "none"
-    
-    })
-})
-
-
+document.querySelectorAll("button").addEventListener("click", () => {
+  let plusClick = document.querySelectorAll("button");
+  plusClick[0] ? (cut.src = images[0]) : cock.appendChild(cut);
+  plusClick[2] ? (cut.src = images[1]) : cock.appendChild(cut);
+  plusClick[4] ? (cut.src = images[2]) : cock.appendChild(cut);
+  plusClick[6] ? (cut.src = images[3]) : cock.appendChild(cut);
+  plusClick[8] ? (cut.src = images[4]) : cock.appendChild(cut);
+  plusClick[10] ? (cut.src = images[5]) : cock.appendChild(cut);
+  plusClick[12] ? (cut.src = images[6]) : cock.appendChild(cut);
+});
 
 // loading
 
 let loader = document.createElement("div"),
-    loading = document.createElement("div");
+  loading = document.createElement("div");
 
 // append
 loader.appendChild(loading);
-document.body.appendChild(loader)
+document.body.appendChild(loader);
 
 // set Attribute
-loader.classList.add("restaurant-loader")
-loading.classList.add("restaurant-loader-inner")
+loader.classList.add("restaurant-loader");
+loading.classList.add("restaurant-loader-inner");
 
 // style for loading page
 
@@ -385,26 +389,17 @@ styleInject(`
       transform: rotate(359deg);
     }
   }
-`)
-
-
-
-
-
-
-
-
+`);
 
 //   event
 span.addEventListener("click", () => {
-    main.style.display = "none";
-    // setTimeout(() => {
-    //     loader.style.display = "inline"
-    // },0);
-setTimeout(() => {
-    loader.style.display = "none"
-    mainSection.style.display = "grid"
-    controlSection.style.display = "flex"
-}, 0);
-  
-})
+  main.style.display = "none";
+  // setTimeout(() => {
+  //     loader.style.display = "inline"
+  // },0);
+  setTimeout(() => {
+    loader.style.display = "none";
+    mainSection.style.display = "grid";
+    controlSection.style.display = "flex";
+  }, 0);
+});
