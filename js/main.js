@@ -117,7 +117,6 @@ for (var i = 0; i < images.length; i++) {
     btns = document.createElement("div");
 
   controlImages.src = images[i];
-
   plus.innerText = "+";
 
   p.innerText = "0";
@@ -192,7 +191,7 @@ h1{
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    padding-bottom: 145px;
+    padding-bottom: 40%;
 }
 .control{
     width: 94%;
@@ -263,6 +262,11 @@ font-weight: 800;
     width: 65%;
     height: 90px;
     animation : topbottom 3s ;
+    margin-bottom: -50px;
+    z-index: 9;
+}
+.chese{
+    margin-bottom: -100px;
 }
 @keyframes topbottom {
 from{
@@ -313,8 +317,9 @@ btnPlus[8].addEventListener("click", () => {
 });
 btnPlus[10].addEventListener("click", () => {
   let cut = document.createElement("img");
-  cut.classList.add("cock-img");
+  cut.classList.add("cock-img" , "chese");
   cut.src = images[5];
+
   cock.appendChild(cut);
 });
 btnPlus[12].addEventListener("click", () => {
@@ -323,6 +328,43 @@ btnPlus[12].addEventListener("click", () => {
   cut.src = images[6];
   cock.appendChild(cut);
 });
+
+
+// minas
+let burgerImgs = document.getElementsByClassName("cock-img")
+
+btnPlus[1].addEventListener("click", () => {
+    burgerImgs[0].remove()
+  });
+  
+  btnPlus[3].addEventListener("click", () => {
+    burgerImgs[1].remove()
+
+  });
+  btnPlus[5].addEventListener("click", () => {
+    burgerImgs[2].remove()
+
+
+  });
+  btnPlus[7].addEventListener("click", () => {
+    burgerImgs[3].remove()
+
+
+  });
+  btnPlus[9].addEventListener("click", () => {
+    burgerImgs[4].remove()
+
+
+  });
+  btnPlus[11].addEventListener("click", () => {
+    burgerImgs[5].remove()
+
+
+  });
+  btnPlus[13].addEventListener("click", () => {
+    burgerImgs[6].remove()
+
+  });
 
 // loading
 
