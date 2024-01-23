@@ -433,7 +433,6 @@ styleInject(`
     background-color: #fff;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
     border-radius: 100%;
-    display:none;
   }
   .restaurant-loader .restaurant-loader-inner {
     width: 100%;
@@ -520,3 +519,9 @@ span.addEventListener("click", () => {
     controlSection.style.display = "flex";
   }, 2000);
 });
+
+window.addEventListener("load" , ()=>{
+ setTimeout(() => {
+      loader.style.display ="none"
+    }, 2000);
+  })
