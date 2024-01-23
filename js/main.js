@@ -154,7 +154,7 @@ cock.classList.add("cock");
 details.classList.add("details");
 controlSection.classList.add("control");
 sum.innerText = "Summary";
-numb.innerText = "$0.00";
+numb.innerText = "$0";
 checkout.innerText = "Checkout";
 
 // style cocking page
@@ -280,85 +280,118 @@ to{
 }
 `);
 
+
+// Details Section
+function calcPrice(number) {
+    let det = parseFloat(numb.textContent.replace('$', '')) + number
+    let price = det.toFixed(2)
+    numb.textContent = '$' + price
+}
+
+
 // plus
 
-let btnPlus = document.querySelectorAll("button");
+let btns = document.querySelectorAll("button");
 
-btnPlus[0].addEventListener("click", () => {
+btns[0].addEventListener("click", () => {
   let cut = document.createElement("img");
   cut.classList.add("cock-img");
   cut.src = images[0];
   cock.appendChild(cut);
+  calcPrice(1)
+
 });
 
-btnPlus[2].addEventListener("click", () => {
+btns[2].addEventListener("click", () => {
   let cut = document.createElement("img");
   cut.classList.add("cock-img");
   cut.src = images[1];
   cock.appendChild(cut);
+  calcPrice(.8)
 });
-btnPlus[4].addEventListener("click", () => {
+btns[4].addEventListener("click", () => {
   let cut = document.createElement("img");
   cut.classList.add("cock-img");
   cut.src = images[2];
   cock.appendChild(cut);
+  calcPrice(.50)
+
 });
-btnPlus[6].addEventListener("click", () => {
+btns[6].addEventListener("click", () => {
   let cut = document.createElement("img");
   cut.classList.add("cock-img");
   cut.src = images[3];
   cock.appendChild(cut);
+  calcPrice(.60)
+
 });
-btnPlus[8].addEventListener("click", () => {
+btns[8].addEventListener("click", () => {
   let cut = document.createElement("img");
   cut.classList.add("cock-img");
   cut.src = images[4];
   cock.appendChild(cut);
+  calcPrice(.40)
+
 });
-btnPlus[10].addEventListener("click", () => {
+btns[10].addEventListener("click", () => {
   let cut = document.createElement("img");
   cut.classList.add("cock-img", "chese");
   cut.src = images[5];
-
   cock.appendChild(cut);
+  calcPrice(.40)
+
 });
-btnPlus[12].addEventListener("click", () => {
+btns[12].addEventListener("click", () => {
   let cut = document.createElement("img");
   cut.classList.add("cock-img");
   cut.src = images[6];
   cock.appendChild(cut);
+  calcPrice(.50)
+
 });
 
 // minas
 
-btnPlus[1].addEventListener("click", () => {
+btns[1].addEventListener("click", () => {
   let img = document.querySelectorAll('.cock>img[src="../images/cutlet.png"]');
   img[0].remove();
+  calcPrice(-1)
 });
 
-btnPlus[3].addEventListener("click", () => {
+btns[3].addEventListener("click", () => {
   let img = document.querySelectorAll('.cock>img[src="../images/mayo.png"]');
   img[0].remove();
+  calcPrice(-.8)
+
 });
-btnPlus[5].addEventListener("click", () => {
+btns[5].addEventListener("click", () => {
   let img = document.querySelectorAll('.cock>img[src="../images/onion.png"]');
   img[0].remove();
+  calcPrice(-.50)
+
 });
-btnPlus[7].addEventListener("click", () => {
+btns[7].addEventListener("click", () => {
   let img = document.querySelectorAll('.cock>img[src="../images/tomatoe.png"]');
   img[0].remove();
+  calcPrice(-.60)
+
 });
-btnPlus[9].addEventListener("click", () => {
+btns[9].addEventListener("click", () => {
   let img = document.querySelectorAll('.cock>img[src="../images/cucumber.png"]');
   img[0].remove();
+  calcPrice(-.40)
 });
-btnPlus[11].addEventListener("click", () => {
+btns[11].addEventListener("click", () => {
   let img = document.querySelectorAll('.cock>img[src="../images/cheese.png"]');
   img[0].remove();
+  calcPrice(-.40)
+
 });
-btnPlus[13].addEventListener("click", () => {
+btns[13].addEventListener("click", () => {
   let img = document.querySelectorAll('.cock>img[src="../images/salad.png"]');
   img[0].remove();
+  calcPrice(-.50)
+
 });
 
 // loading
