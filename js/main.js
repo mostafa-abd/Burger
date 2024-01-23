@@ -317,7 +317,7 @@ btnPlus[8].addEventListener("click", () => {
 });
 btnPlus[10].addEventListener("click", () => {
   let cut = document.createElement("img");
-  cut.classList.add("cock-img" , "chese");
+  cut.classList.add("cock-img", "chese");
   cut.src = images[5];
 
   cock.appendChild(cut);
@@ -329,42 +329,37 @@ btnPlus[12].addEventListener("click", () => {
   cock.appendChild(cut);
 });
 
-
 // minas
-let burgerImgs = document.getElementsByClassName("cock-img")
 
 btnPlus[1].addEventListener("click", () => {
-    burgerImgs[0].remove()
-  });
-  
-  btnPlus[3].addEventListener("click", () => {
-    burgerImgs[1].remove()
+  let img = document.querySelectorAll('.cock>img[src="../images/cutlet.png"]');
+  img[0].remove();
+});
 
-  });
-  btnPlus[5].addEventListener("click", () => {
-    burgerImgs[2].remove()
-
-
-  });
-  btnPlus[7].addEventListener("click", () => {
-    burgerImgs[3].remove()
-
-
-  });
-  btnPlus[9].addEventListener("click", () => {
-    burgerImgs[4].remove()
-
-
-  });
-  btnPlus[11].addEventListener("click", () => {
-    burgerImgs[5].remove()
-
-
-  });
-  btnPlus[13].addEventListener("click", () => {
-    burgerImgs[6].remove()
-
-  });
+btnPlus[3].addEventListener("click", () => {
+  let img = document.querySelectorAll('.cock>img[src="../images/mayo.png"]');
+  img[0].remove();
+});
+btnPlus[5].addEventListener("click", () => {
+  let img = document.querySelectorAll('.cock>img[src="../images/onion.png"]');
+  img[0].remove();
+});
+btnPlus[7].addEventListener("click", () => {
+  let img = document.querySelectorAll('.cock>img[src="../images/tomatoe.png"]');
+  img[0].remove();
+});
+btnPlus[9].addEventListener("click", () => {
+  let img = document.querySelectorAll('.cock>img[src="../images/cucumber.png"]');
+  img[0].remove();
+});
+btnPlus[11].addEventListener("click", () => {
+  let img = document.querySelectorAll('.cock>img[src="../images/cheese.png"]');
+  img[0].remove();
+});
+btnPlus[13].addEventListener("click", () => {
+  let img = document.querySelectorAll('.cock>img[src="../images/salad.png"]');
+  img[0].remove();
+});
 
 // loading
 
