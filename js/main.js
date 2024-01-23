@@ -190,10 +190,9 @@ h1{
     background-size: 80%;
     background-position: center;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    flex-direction: column-reverse;
     align-items: center;
-    padding-bottom: 130px;
+    padding-bottom: 145px;
 }
 .control{
     width: 94%;
@@ -276,18 +275,53 @@ to{
 }
 }
 `);
-let cut = document.createElement("img");
-cut.classList.add("cock-img");
+
 // plus
-document.querySelectorAll("button").addEventListener("click", () => {
-  let plusClick = document.querySelectorAll("button");
-  plusClick[0] ? (cut.src = images[0]) : cock.appendChild(cut);
-  plusClick[2] ? (cut.src = images[1]) : cock.appendChild(cut);
-  plusClick[4] ? (cut.src = images[2]) : cock.appendChild(cut);
-  plusClick[6] ? (cut.src = images[3]) : cock.appendChild(cut);
-  plusClick[8] ? (cut.src = images[4]) : cock.appendChild(cut);
-  plusClick[10] ? (cut.src = images[5]) : cock.appendChild(cut);
-  plusClick[12] ? (cut.src = images[6]) : cock.appendChild(cut);
+
+let btnPlus = document.querySelectorAll("button");
+
+btnPlus[0].addEventListener("click", () => {
+  let cut = document.createElement("img");
+  cut.classList.add("cock-img");
+  cut.src = images[0];
+  cock.appendChild(cut);
+});
+
+btnPlus[2].addEventListener("click", () => {
+  let cut = document.createElement("img");
+  cut.classList.add("cock-img");
+  cut.src = images[1];
+  cock.appendChild(cut);
+});
+btnPlus[4].addEventListener("click", () => {
+  let cut = document.createElement("img");
+  cut.classList.add("cock-img");
+  cut.src = images[2];
+  cock.appendChild(cut);
+});
+btnPlus[6].addEventListener("click", () => {
+  let cut = document.createElement("img");
+  cut.classList.add("cock-img");
+  cut.src = images[3];
+  cock.appendChild(cut);
+});
+btnPlus[8].addEventListener("click", () => {
+  let cut = document.createElement("img");
+  cut.classList.add("cock-img");
+  cut.src = images[4];
+  cock.appendChild(cut);
+});
+btnPlus[10].addEventListener("click", () => {
+  let cut = document.createElement("img");
+  cut.classList.add("cock-img");
+  cut.src = images[5];
+  cock.appendChild(cut);
+});
+btnPlus[12].addEventListener("click", () => {
+  let cut = document.createElement("img");
+  cut.classList.add("cock-img");
+  cut.src = images[6];
+  cock.appendChild(cut);
 });
 
 // loading
