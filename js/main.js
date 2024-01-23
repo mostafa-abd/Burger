@@ -163,7 +163,7 @@ styleInject(`
 .main-section{
     display:none;
     width: 94%;
-    height: 80vh;
+    height: 75vh;
     grid-template-columns: 18% 50% 28%;
     padding: 2% 3% 0 3%;
     justify-content:space-between;
@@ -198,7 +198,7 @@ h1{
     height: 13vh;
     padding: 0% 3%;
     display:none;
-    margin-top: 1%;
+    margin-top: 3%;
 }
 .control>div>img{
     width: 104px;
@@ -511,12 +511,12 @@ styleInject(`
 //   event
 span.addEventListener("click", () => {
   main.style.display = "none";
-  // setTimeout(() => {
-  //     loader.style.display = "inline"
-  // },0);
+  setTimeout(() => {
+      loader.style.display = "inline"
+  },0);
   setTimeout(() => {
     loader.style.display = "none";
     mainSection.style.display = "grid";
     controlSection.style.display = "flex";
-  }, 0);
+  }, 2000);
 });
