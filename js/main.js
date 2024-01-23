@@ -280,24 +280,23 @@ to{
 }
 `);
 
-
 // Details Section
 function calcPrice(number) {
-    let det = parseFloat(numb.textContent.replace('$', '')) + number
-    let price = Math.max(det , 0).toFixed(2)
-    numb.textContent = '$' + price
+  let det = parseFloat(numb.textContent.replace("$", "")) + number;
+  let price = Math.max(det, 0).toFixed(2);
+  numb.textContent = "$" + price;
 }
 
 function plusp(j) {
-    let p = document.querySelectorAll(".control>div>div>p")
-    int = parseInt(p[j].textContent) + 1 
-    p[j].textContent = int
+  let p = document.querySelectorAll(".control>div>div>p");
+  int = parseInt(p[j].textContent) + 1;
+  p[j].textContent = int;
 }
 
 function minp(j) {
-    let p = document.querySelectorAll(".control>div>div>p")
-    int = Math.max(parseInt(p[j].textContent) - 1 , 0) 
-    p[j].textContent = int
+  let p = document.querySelectorAll(".control>div>div>p");
+  int = Math.max(parseInt(p[j].textContent) - 1, 0);
+  p[j].textContent = int;
 }
 // plus
 
@@ -308,9 +307,8 @@ btns[0].addEventListener("click", () => {
   cut.classList.add("cock-img");
   cut.src = images[0];
   cock.appendChild(cut);
-  calcPrice(1)
-  plusp(0)
-
+  calcPrice(1);
+  plusp(0);
 });
 
 btns[2].addEventListener("click", () => {
@@ -318,48 +316,48 @@ btns[2].addEventListener("click", () => {
   cut.classList.add("cock-img");
   cut.src = images[1];
   cock.appendChild(cut);
-  calcPrice(.8)
-  plusp(1)
+  calcPrice(0.8);
+  plusp(1);
 });
 btns[4].addEventListener("click", () => {
   let cut = document.createElement("img");
   cut.classList.add("cock-img");
   cut.src = images[2];
   cock.appendChild(cut);
-  calcPrice(.50)
-  plusp(2)
+  calcPrice(0.5);
+  plusp(2);
 });
 btns[6].addEventListener("click", () => {
   let cut = document.createElement("img");
   cut.classList.add("cock-img");
   cut.src = images[3];
   cock.appendChild(cut);
-  calcPrice(.60)
-  plusp(3)
+  calcPrice(0.6);
+  plusp(3);
 });
 btns[8].addEventListener("click", () => {
   let cut = document.createElement("img");
   cut.classList.add("cock-img");
   cut.src = images[4];
   cock.appendChild(cut);
-  calcPrice(.40)
-  plusp(4)
+  calcPrice(0.4);
+  plusp(4);
 });
 btns[10].addEventListener("click", () => {
   let cut = document.createElement("img");
   cut.classList.add("cock-img", "chese");
   cut.src = images[5];
   cock.appendChild(cut);
-  calcPrice(.40)
-  plusp(5)
+  calcPrice(0.4);
+  plusp(5);
 });
 btns[12].addEventListener("click", () => {
   let cut = document.createElement("img");
   cut.classList.add("cock-img");
   cut.src = images[6];
   cock.appendChild(cut);
-  calcPrice(.50)
-  plusp(6)
+  calcPrice(0.5);
+  plusp(6);
 });
 
 // minas
@@ -367,44 +365,46 @@ btns[12].addEventListener("click", () => {
 btns[1].addEventListener("click", () => {
   let img = document.querySelectorAll('.cock>img[src="../images/cutlet.png"]');
   img[0].remove();
-  minp(0)
+  minp(0);
 });
 
 btns[3].addEventListener("click", () => {
   let img = document.querySelectorAll('.cock>img[src="../images/mayo.png"]');
   img[0].remove();
-  calcPrice(-.8)
-  minp(1)
+  calcPrice(-0.8);
+  minp(1);
 });
 btns[5].addEventListener("click", () => {
   let img = document.querySelectorAll('.cock>img[src="../images/onion.png"]');
   img[0].remove();
-  calcPrice(-.50)
-  minp(2)
+  calcPrice(-0.5);
+  minp(2);
 });
 btns[7].addEventListener("click", () => {
   let img = document.querySelectorAll('.cock>img[src="../images/tomatoe.png"]');
   img[0].remove();
-  calcPrice(-.60)
-  minp(3)
+  calcPrice(-0.6);
+  minp(3);
 });
 btns[9].addEventListener("click", () => {
-  let img = document.querySelectorAll('.cock>img[src="../images/cucumber.png"]');
+  let img = document.querySelectorAll(
+    '.cock>img[src="../images/cucumber.png"]'
+  );
   img[0].remove();
-  calcPrice(-.40)
-  minp(4)
+  calcPrice(-0.4);
+  minp(4);
 });
 btns[11].addEventListener("click", () => {
   let img = document.querySelectorAll('.cock>img[src="../images/cheese.png"]');
   img[0].remove();
-  calcPrice(-.40)
-  minp(5)
+  calcPrice(-0.4);
+  minp(5);
 });
 btns[13].addEventListener("click", () => {
   let img = document.querySelectorAll('.cock>img[src="../images/salad.png"]');
   img[0].remove();
-  calcPrice(-.50)
-  minp(6)
+  calcPrice(-0.5);
+  minp(6);
 });
 
 // loading
@@ -511,8 +511,8 @@ styleInject(`
 span.addEventListener("click", () => {
   main.style.display = "none";
   setTimeout(() => {
-      loader.style.display = "inline"
-  },0);
+    loader.style.display = "inline";
+  }, 0);
   setTimeout(() => {
     loader.style.display = "none";
     mainSection.style.display = "grid";
@@ -520,8 +520,10 @@ span.addEventListener("click", () => {
   }, 2000);
 });
 
-window.addEventListener("load" , ()=>{
- setTimeout(() => {
-      loader.style.display ="none"
-    }, 2000);
-  })
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    loader.style.display = "none";
+  }, 2000);
+});
+
+// media query
