@@ -292,9 +292,9 @@ function plusp(j) {
   int = parseInt(p[j].textContent) + 1;
   p[j].textContent = int;
 }
+let p = document.querySelectorAll(".control>div>div>p");
 
 function minp(j) {
-  let p = document.querySelectorAll(".control>div>div>p");
   int = Math.max(parseInt(p[j].textContent) - 1, 0);
   p[j].textContent = int;
 }
@@ -387,9 +387,7 @@ btns[7].addEventListener("click", () => {
   minp(3);
 });
 btns[9].addEventListener("click", () => {
-  let img = document.querySelectorAll(
-    '.cock>img[src="./images/cucumber.png"]'
-  );
+  let img = document.querySelectorAll('.cock>img[src="./images/cucumber.png"]');
   img[0].remove();
   calcPrice(-0.4);
   minp(4);
@@ -405,6 +403,20 @@ btns[13].addEventListener("click", () => {
   img[0].remove();
   calcPrice(-0.5);
   minp(6);
+});
+// Checkout
+checkout.addEventListener("click", () => {
+  let burgerDetails = [
+    p[0].textContent,
+    p[1].textContent,
+    p[2].textContent,
+    p[3].textContent,
+    p[4].textContent,
+    p[5].textContent,
+    p[6].textContent,
+    numb.textContent,
+  ];
+// data send to ????
 });
 
 // loading
@@ -524,7 +536,6 @@ window.addEventListener("load", () => {
   setTimeout(() => {
     loader.style.display = "none";
     main.style.display = "flex";
-
   }, 2000);
 });
 
