@@ -18,7 +18,7 @@ document.body.appendChild(main);
 
 // set Attributes ( home page)
 
-img.setAttribute("src", "../images/main-img.png");
+img.setAttribute("src", "./images/main-img.png");
 left.classList.add("left");
 
 // style home page
@@ -39,7 +39,7 @@ styleInject(`
   main{
     width:100%;
     height:100vh;
-    display:flex;
+    display:none;
     justify-content:space-between;
   }
   .left{
@@ -97,13 +97,13 @@ let mainSection = document.createElement("section"),
 
 (controlSection = document.createElement("section")),
   (images = [
-    "../images/cutlet.png",
-    "../images/mayo.png",
-    "../images/onion.png",
-    "../images/tomatoe.png",
-    "../images/cucumber.png",
-    "../images/cheese.png",
-    "../images/salad.png",
+    "./images/cutlet.png",
+    "./images/mayo.png",
+    "./images/onion.png",
+    "./images/tomatoe.png",
+    "./images/cucumber.png",
+    "./images/cheese.png",
+    "./images/salad.png",
   ]);
 
 for (var i = 0; i < images.length; i++) {
@@ -183,7 +183,7 @@ h1{
     line-height: 50px;
 }
 .cock{
-    background-image:url(../images/burger.png);
+    background-image:url(./images/burger.png);
     height:100%;
     background-repeat: no-repeat;
     background-size: 80%;
@@ -363,45 +363,45 @@ btns[12].addEventListener("click", () => {
 // minas
 
 btns[1].addEventListener("click", () => {
-  let img = document.querySelectorAll('.cock>img[src="../images/cutlet.png"]');
+  let img = document.querySelectorAll('.cock>img[src="./images/cutlet.png"]');
   img[0].remove();
   minp(0);
 });
 
 btns[3].addEventListener("click", () => {
-  let img = document.querySelectorAll('.cock>img[src="../images/mayo.png"]');
+  let img = document.querySelectorAll('.cock>img[src="./images/mayo.png"]');
   img[0].remove();
   calcPrice(-0.8);
   minp(1);
 });
 btns[5].addEventListener("click", () => {
-  let img = document.querySelectorAll('.cock>img[src="../images/onion.png"]');
+  let img = document.querySelectorAll('.cock>img[src="./images/onion.png"]');
   img[0].remove();
   calcPrice(-0.5);
   minp(2);
 });
 btns[7].addEventListener("click", () => {
-  let img = document.querySelectorAll('.cock>img[src="../images/tomatoe.png"]');
+  let img = document.querySelectorAll('.cock>img[src="./images/tomatoe.png"]');
   img[0].remove();
   calcPrice(-0.6);
   minp(3);
 });
 btns[9].addEventListener("click", () => {
   let img = document.querySelectorAll(
-    '.cock>img[src="../images/cucumber.png"]'
+    '.cock>img[src="./images/cucumber.png"]'
   );
   img[0].remove();
   calcPrice(-0.4);
   minp(4);
 });
 btns[11].addEventListener("click", () => {
-  let img = document.querySelectorAll('.cock>img[src="../images/cheese.png"]');
+  let img = document.querySelectorAll('.cock>img[src="./images/cheese.png"]');
   img[0].remove();
   calcPrice(-0.4);
   minp(5);
 });
 btns[13].addEventListener("click", () => {
-  let img = document.querySelectorAll('.cock>img[src="../images/salad.png"]');
+  let img = document.querySelectorAll('.cock>img[src="./images/salad.png"]');
   img[0].remove();
   calcPrice(-0.5);
   minp(6);
@@ -459,7 +459,7 @@ styleInject(`
     background-position: center center;
   }
   .restaurant-loader:before {
-    background-image: url("../images/Nc4xNES.png");
+    background-image: url("./images/Nc4xNES.png");
     height: 35%;
     animation-duration: 1s;
     animation-fill-mode: both;
@@ -467,7 +467,7 @@ styleInject(`
     animation-name: restaurant-loader-pot;
   }
   .restaurant-loader:after {
-    background-image: url("../images/lNXd2Lr.png");
+    background-image: url("./images/lNXd2Lr.png");
     height: 65%;
   }
   
@@ -523,6 +523,8 @@ span.addEventListener("click", () => {
 window.addEventListener("load", () => {
   setTimeout(() => {
     loader.style.display = "none";
+    main.style.display = "flex";
+
   }, 2000);
 });
 
