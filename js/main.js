@@ -268,6 +268,16 @@ font-weight: 800;
 .chese{
     margin-bottom: -100px;
 }
+.popup{
+  position: absolute;
+  background: red;
+  width: 85%;
+  height: 85vh;
+  top: 5%;
+  left: 5%;
+  border-radius: 75px;
+
+}
 @keyframes topbottom {
 from{
     transform: translateY(-350px);
@@ -417,6 +427,10 @@ checkout.addEventListener("click", () => {
     numb.textContent,
   ];
 // data send to ????
+
+let popup = document.createElement("div")
+popup.classList.add("popup")
+document.body.append(popup)
 });
 
 // loading
