@@ -268,16 +268,6 @@ font-weight: 800;
 .chese{
     margin-bottom: -100px;
 }
-.popup{
-  position: absolute;
-  background: red;
-  width: 85%;
-  height: 85vh;
-  top: 5%;
-  left: 5%;
-  border-radius: 75px;
-
-}
 @keyframes topbottom {
 from{
     transform: translateY(-350px);
@@ -414,6 +404,22 @@ btns[13].addEventListener("click", () => {
   calcPrice(-0.5);
   minp(6);
 });
+
+// popup
+
+let popup = document.createElement("div"),
+    from = document.createElement("form"),
+    labelOne = document.createElement("label").TEXT_NODE = "Name",
+    labelTwo = document.createElement("label").TEXT_NODE = "phone number",
+    labelThree = document.createElement("label").TEXT_NODE = "Location",
+    inputOne = document.createElement("input"),
+    inputTwo = document.createElement("input"),
+    inputThree = document.createElement("input"),
+    formButton = document.createElement("button");
+
+    popup.classList.add("popup");
+    popup.append(labelOne , inputOne ,labelTwo , inputTwo , labelThree , inputThree , formButton)
+
 // Checkout
 checkout.addEventListener("click", () => {
   let burgerDetails = [
@@ -428,10 +434,26 @@ checkout.addEventListener("click", () => {
   ];
 // data send to ????
 
-let popup = document.createElement("div")
-popup.classList.add("popup")
 document.body.append(popup)
 });
+
+
+// style cocking page
+
+styleInject(`
+.popup{
+  position: absolute;
+  background: red;
+  width: 85%;
+  height: 85vh;
+  top: 5%;
+  left: 5%;
+  border-radius: 75px;
+}
+popup>label{
+  
+}
+`)
 
 // loading
 
