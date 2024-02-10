@@ -740,5 +740,9 @@ margin-top:40%;
 }
 .cock {
   background-size: contain;
+  height: 35vh;
+}
+.details>p {
+  height: 50%;
 }
 `);
