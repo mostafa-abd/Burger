@@ -744,5 +744,6 @@ margin-top:40%;
 }
 .details>p {
   height: 50%;
+  margin-bottom: 4%;
 }
 `);
