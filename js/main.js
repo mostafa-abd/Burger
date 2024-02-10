@@ -417,14 +417,21 @@ let popup = document.createElement("div"),
     inputTwo = document.createElement("input"),
     inputThree = document.createElement("input"),
     formButton = document.createElement("button");
+    cancel = document.createElement("div");
+    formButtons = document.createElement("div");
 
     ti.textContent  =  "Checkout"
     labelOne.textContent = "Your Name"
     labelTwo.textContent = "Phone Number",
     labelThree.textContent = "Shipping Address",
-    inputTwo.setAttribute("maxlength" , "11")
+    formButton.textContent = "Checkout"
+    cancel.textContent = "cancel"
+
     popup.classList.add("popup");
-    form.append(labelOne , inputOne ,labelTwo , inputTwo , labelThree , inputThree , formButton);
+    inputTwo.setAttribute("maxlength" , "11")
+    formButtons.classList.add("form-btns")
+    formButtons.append(formButton , cancel)
+    form.append(labelOne , inputOne ,labelTwo , inputTwo , labelThree , inputThree ,formButtons );
     popup.append(ti , form);
 
 
@@ -482,11 +489,37 @@ form>input:nth-of-type(2){
 form>input:nth-of-type(3){
   margin: 2% 0% 2% 2%;
 }
-form>button{
-
+form>.form-btns>button , form>.form-btns>div{
+  background: #5243C2;
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 10px 10px 10px gray;
+}
+form>.form-btns>div{
+  background: #F5F5FF;
+  color: black;
+  text-align: center;
+  padding: 10px;
+  height: auto;
+}
+.form-btns{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 30%;
+}
+.click{
+  transform: scale(0.8);
 }
 `)
 
+
+// validation phone number
 inputTwo.addEventListener('input', function (event) {
   let inputValue = event.target.value;
 
@@ -495,24 +528,45 @@ inputTwo.addEventListener('input', function (event) {
   event.target.value = numericValue;
   umericValue = numericValue.slice(0, 11);
 });
+let checkDetail = []
+
+
+
+formButton.addEventListener("click" , ()=>{
+  formButton.classList.add("click")
+  let info = {
+    "Name" : inputOne.value,
+    "phone" : inputTwo.value,
+    "location" :inputThree.value
+  }
+  checkDetail.push(info)
+})
+
+cancel.addEventListener("click" , ()=>{
+  cancel.classList.add("click")
+  document.body.removeChild(popup)
+
+})
 // Checkout
 checkout.addEventListener("click", () => {
-  let burgerDetails = [
-    p[0].textContent,
-    p[1].textContent,
-    p[2].textContent,
-    p[3].textContent,
-    p[4].textContent,
-    p[5].textContent,
-    p[6].textContent,
-    numb.textContent,
-  ];
-// data send to ????
+let burgerDetails = {
+  "cutlet" :    p[0].textContent,
+  "mayo":    p[1].textContent,
+  "onion":    p[2].textContent,
+  "tomatoe":    p[3].textContent,
+  "cucumber":    p[4].textContent,
+  "cheese":    p[5].textContent,
+  "salad":    p[6].textContent,
+  "prise":    numb.textContent
+}
+checkDetail.push(burgerDetails)
+
+  // data send to ????
 
 document.body.append(popup)
 });
-// loading
 
+// loading
 let loader = document.createElement("div"),
   loading = document.createElement("div");
 
