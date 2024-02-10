@@ -434,7 +434,9 @@ let popup = document.createElement("div"),
     form.append(labelOne , inputOne ,labelTwo , inputTwo , labelThree , inputThree ,formButtons );
     popup.append(ti , form);
 
-
+    inputOne.required = true;
+    inputTwo.required = true;
+    inputThree.required = true;
 
 // style popup page
 
