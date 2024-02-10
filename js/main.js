@@ -685,7 +685,7 @@ window.addEventListener("load", () => {
   setTimeout(() => {
     loader.style.display = "none";
     main.style.display = "flex";
-  }, 2000);
+  }, 200);
 });
 
 // media query for Home page
