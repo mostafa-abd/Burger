@@ -678,7 +678,7 @@ span.addEventListener("click", () => {
     loader.style.display = "none";
     mainSection.style.display = "grid";
     controlSection.style.display = "flex";
-  }, 2000);
+  }, 0);
 });
 
 window.addEventListener("load", () => {
