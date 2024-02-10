@@ -746,4 +746,7 @@ margin-top:40%;
   height: 50%;
   margin-bottom: 4%;
 }
+.popup{
+  height: 68vh;
+}
 `);
