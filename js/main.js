@@ -704,6 +704,7 @@ img {
 span {
   top: 50%;
   left: 35%;
+  transform: translate(-115px, 40px);
 }
 }
 `);
