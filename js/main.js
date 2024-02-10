@@ -593,6 +593,7 @@ styleInject(`
     background-color: #fff;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
     border-radius: 100%;
+    transform: translate(-50px, -50px);
   }
   .restaurant-loader .restaurant-loader-inner {
     width: 100%;
@@ -677,7 +678,7 @@ span.addEventListener("click", () => {
     loader.style.display = "none";
     mainSection.style.display = "grid";
     controlSection.style.display = "flex";
-  }, 2000);
+  }, 200000);
 });
 
 window.addEventListener("load", () => {
@@ -687,4 +688,57 @@ window.addEventListener("load", () => {
   }, 2000);
 });
 
-// media query
+// media query for Home page
+styleInject(`
+@media (max-width: 800px){
+  main{
+    flex-direction: column;
+    margin-top: 10%;
+}
+.left > div {
+  width: 70%;
+}
+img {
+  width: 100%;
+}
+span {
+  top: 50%;
+  left: 35%;
+}
+}
+`);
+
+// media query for cock page
+styleInject(`
+@media (max-width: 800px){
+  h1 {
+    display:none;
+  }
+  .main-section {
+    grid-template-columns: 100%;
+}
+.contain {
+  width: 30%;
+}
+.control {
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+form ,.popup>div{
+  margin-left: 5%;
+  width: 90%;
+}
+form>label {
+display:block;
+}
+form>input , form>input:nth-of-type(2){
+  width: 80%;
+  margin: 2% 3%;
+}
+.popup>div {
+margin-top:40%;
+}
+.cock {
+  background-size: contain;
+}
+`);
