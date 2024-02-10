@@ -408,18 +408,93 @@ btns[13].addEventListener("click", () => {
 // popup
 
 let popup = document.createElement("div"),
-    from = document.createElement("form"),
-    labelOne = document.createElement("label").TEXT_NODE = "Name",
-    labelTwo = document.createElement("label").TEXT_NODE = "phone number",
-    labelThree = document.createElement("label").TEXT_NODE = "Location",
+    ti = document.createElement("div")
+    form = document.createElement("form"),
+    labelOne = document.createElement("label"),
+    labelTwo = document.createElement("label"),
+    labelThree = document.createElement("label"),
     inputOne = document.createElement("input"),
     inputTwo = document.createElement("input"),
     inputThree = document.createElement("input"),
     formButton = document.createElement("button");
 
+    ti.textContent  =  "Checkout"
+    labelOne.textContent = "Your Name"
+    labelTwo.textContent = "Phone Number",
+    labelThree.textContent = "Shipping Address",
+    inputTwo.setAttribute("maxlength" , "11")
     popup.classList.add("popup");
-    popup.append(labelOne , inputOne ,labelTwo , inputTwo , labelThree , inputThree , formButton)
+    form.append(labelOne , inputOne ,labelTwo , inputTwo , labelThree , inputThree , formButton);
+    popup.append(ti , form);
 
+
+
+// style popup page
+
+styleInject(`
+.popup{
+  position: absolute;
+  background: #00579f85;
+  width: 85%;
+  height: 85vh;
+  top: 5%;
+  left: 5%;
+  border-radius: 75px;
+  z-index: 9;
+}
+.popup>div{
+  width: 50%;
+  color: black;
+  font-size: 40px;
+  font-weight: 900;
+  background: white;
+  border-bottom: 2px solid #595656;
+  margin: 10% 25% 0;
+  border-radius: 10px 10px 0px 0px;
+  text-align: center;
+}
+form{
+  margin: 0 25% 0;
+    background-color: white;
+    width: 50%;
+    height: 47%;
+    border-radius: 0 0px 30px 36px;
+    padding-top: 3%;
+}
+form>label{
+  font-size: 20px;
+    color: black;
+    margin: 0 0 0 2%;
+        font-weight: 600;
+
+}
+form>input{
+  width: 60%;
+  margin: 2% 0% 2% 11%;
+  height: 25px;
+  border: 2px solid gray;
+  border-radius: 7px;
+  display: table-caption;
+}
+form>input:nth-of-type(2){
+  margin: 2% 0% 2% 5.5%;
+}
+form>input:nth-of-type(3){
+  margin: 2% 0% 2% 2%;
+}
+form>button{
+
+}
+`)
+
+inputTwo.addEventListener('input', function (event) {
+  let inputValue = event.target.value;
+
+  let numericValue = inputValue.replace(/[^0-9]/g, '');
+
+  event.target.value = numericValue;
+  umericValue = numericValue.slice(0, 11);
+});
 // Checkout
 checkout.addEventListener("click", () => {
   let burgerDetails = [
@@ -436,25 +511,6 @@ checkout.addEventListener("click", () => {
 
 document.body.append(popup)
 });
-
-
-// style cocking page
-
-styleInject(`
-.popup{
-  position: absolute;
-  background: red;
-  width: 85%;
-  height: 85vh;
-  top: 5%;
-  left: 5%;
-  border-radius: 75px;
-}
-popup>label{
-  
-}
-`)
-
 // loading
 
 let loader = document.createElement("div"),
