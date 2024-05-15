@@ -1,0 +1,246 @@
+[33mcommit 942ac654bcf983befc00a35d1b8f3d6d5c0b5f08[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmostafa[m[33m, [m[1;31morigin/mostafa[m[33m)[m
+Author: mostafa-for-work@hotmail.com <mostafa-for-work@hotmail.com>
+Date:   Wed May 15 20:33:16 2024 +0200
+
+    sada
+
+[33mcommit 1133865f16ab6a4d6bb6f82b5e540ec39f5f79b2[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: Mostafa AbdElmogod <mostafa-for-work@hotmail.com>
+Date:   Sat Feb 10 17:37:02 2024 +0200
+
+    Update main.js
+
+[33mcommit 80fb2fddeaeaa97b7216a5056997b71b3f696547[m
+Author: Mostafa AbdElmogod <mostafa-for-work@hotmail.com>
+Date:   Sat Feb 10 17:35:07 2024 +0200
+
+    Update main.js
+
+[33mcommit 9ed38ec980ead6566444f003b993d1514e4998ee[m
+Author: Mostafa AbdElmogod <mostafa-for-work@hotmail.com>
+Date:   Sat Feb 10 17:33:32 2024 +0200
+
+    Update main.js
+
+[33mcommit 1a5344e334b24870d04337cd7b39d661e470af68[m
+Author: Mostafa AbdElmogod <mostafa-for-work@hotmail.com>
+Date:   Sat Feb 10 17:30:47 2024 +0200
+
+    Update main.js
+
+[33mcommit 76ef6e5d069ed76d87725041ec1c25a9d3b7bed6[m
+Merge: 8689c36 24e6a94
+Author: Mostafa AbdElmogod <mostafa-for-work@hotmail.com>
+Date:   Sat Feb 10 17:23:23 2024 +0200
+
+    Merge branch 'main' of https://github.com/mostafa-abd/burger
+
+[33mcommit 8689c36887b3b58839ff7e266a88b1b63e8bb44b[m
+Author: Mostafa AbdElmogod <mostafa-for-work@hotmail.com>
+Date:   Sat Feb 10 17:23:20 2024 +0200
+
+    update
+
+[33mcommit 24e6a9481252e8dda664656f057a95cf08db81e3[m
+Author: Mostafa AbdElmogod <155806017+mostafa-abd@users.noreply.github.com>
+Date:   Sat Feb 10 17:21:26 2024 +0200
+
+    Update main.js
+
+[33mcommit 4ef0da1845df09baa6a9649d50ae204a3ccc8b8a[m
+Author: Mostafa AbdElmogod <mostafa-for-work@hotmail.com>
+Date:   Sat Feb 10 17:17:22 2024 +0200
+
+    Update main.js
+
+[33mcommit a3558704658aaa555add9026a40bd7bf4eb97ccc[m
+Author: Mostafa AbdElmogod <mostafa-for-work@hotmail.com>
+Date:   Sat Feb 10 17:04:57 2024 +0200
+
+    add media query
+
+[33mcommit d9cf36d93cf5c5067e088ba0ea099d249c3d12ca[m
+Author: Mostafa AbdElmogod <mostafa-for-work@hotmail.com>
+Date:   Sat Feb 10 16:35:09 2024 +0200
+
+    Update main.js
+
+[33mcommit 93f6587b876e02a0890b76d96b9f850758cdb7a0[m
+Author: Mostafa AbdElmogod <mostafa-for-work@hotmail.com>
+Date:   Sat Feb 10 16:27:55 2024 +0200
+
+    finish funchnality
+
+[33mcommit d28657df374d8e6d355508cf17ae3f56ab084d67[m
+Author: Mostafa AbdElmogod <mostafa-for-work@hotmail.com>
+Date:   Sat Feb 10 13:02:00 2024 +0200
+
+    Update main.js
+
+[33mcommit 6daf506fac0271c959f3021afad04e8422aa0097[m
+Author: Mostafa AbdElmogod <mostafa-for-work@hotmail.com>
+Date:   Sat Feb 3 11:08:13 2024 +0200
+
+    update
+
+[33mcommit 094aaf1e6a28475c073d8ffbaae011e9553ca58b[m
+Author: Mostafa AbdElmogod <mostafa-for-work@hotmail.com>
+Date:   Fri Jan 26 03:44:36 2024 +0200
+
+    popup
+
+[33mcommit 4da2c930a5da7cd46f8bac4c3c80a1ef51fb888c[m
+Author: Mostafa AbdElmogod <mostafa-for-work@hotmail.com>
+Date:   Fri Jan 26 03:36:44 2024 +0200
+
+    checkout
+
+[33mcommit 25c4333296a958a991d65c7e24d1f80a4eb702de[m
+Author: Mostafa AbdElmogod <mostafa-for-work@hotmail.com>
+Date:   Fri Jan 26 03:28:29 2024 +0200
+
+    solve problems
+
+[33mcommit 1e492726563428af4ba7926a367fa22237c18895[m
+Author: Mostafa AbdElmogod <mostafa-for-work@hotmail.com>
+Date:   Wed Jan 24 00:59:14 2024 +0200
+
+    start media query
+
+[33mcommit d6600ada44e966463f1123ac37ba56d879d531a8[m
+Author: Mostafa AbdElmogod <mostafa-for-work@hotmail.com>
+Date:   Wed Jan 24 00:54:42 2024 +0200
+
+    update loading page
+
+[33mcommit 17a38f42a15b53491f17dd6c4090a239a7cfb144[m
+Author: Mostafa AbdElmogod <mostafa-for-work@hotmail.com>
+Date:   Wed Jan 24 00:43:20 2024 +0200
+
+    update
+
+[33mcommit a3e7a6ac258a35eaa031b419708e2e38aacb9540[m
+Author: Mostafa AbdElmogod <mostafa-for-work@hotmail.com>
+Date:   Wed Jan 24 00:39:39 2024 +0200
+
+    update
+
+[33mcommit 59912cb1fa91b766186060ea42c5b24a7dbefb75[m
+Author: Mostafa AbdElmogod <mostafa-for-work@hotmail.com>
+Date:   Tue Jan 23 23:46:25 2024 +0200
+
+    price section
+
+[33mcommit 22008f0e7a144b775c41f80ef34e7cbbca54a348[m
+Author: Mostafa AbdElmogod <mostafa-for-work@hotmail.com>
+Date:   Tue Jan 23 23:11:27 2024 +0200
+
+    update
+
+[33mcommit 121c7d0ede4e32fdcd3fcd8ab93cd890bd84fcfe[m
+Author: Mostafa AbdElmogod <mostafa-for-work@hotmail.com>
+Date:   Tue Jan 23 22:42:36 2024 +0200
+
+    minas section
+
+[33mcommit 13c27c7958cfffd85e203d558e2b053e11ed3fbd[m
+Author: Mostafa AbdElmogod <mostafa-for-work@hotmail.com>
+Date:   Tue Jan 23 22:04:43 2024 +0200
+
+    plus section
+
+[33mcommit 25db41827b3367bd3f75572bdc52f11c0c84d086[m
+Author: Mostafa AbdElmogod <mostafa-for-work@hotmail.com>
+Date:   Sat Jan 13 23:03:45 2024 +0200
+
+    plus event
+
+[33mcommit 89c16cfcfe63353bf839557d214e3d3856f88cc3[m
+Author: Mostafa AbdElmogod <mostafa-for-work@hotmail.com>
+Date:   Sat Jan 13 22:43:05 2024 +0200
+
+    update cock section & control
+
+[33mcommit 64dbdd697dab546980553beba652453669a4ccc8[m
+Author: Mostafa AbdElmogod <mostafa-for-work@hotmail.com>
+Date:   Sat Jan 13 22:07:09 2024 +0200
+
+    details section
+
+[33mcommit 9823fe243450abc13ab66dd8638e3a68adde4aa6[m
+Author: Mostafa AbdElmogod <mostafa-for-work@hotmail.com>
+Date:   Sat Jan 13 21:56:07 2024 +0200
+
+    loading page done
+
+[33mcommit 160984e4a722308d6c26deeaab905c8bb7f56551[m
+Author: Mostafa AbdElmogod <mostafa-for-work@hotmail.com>
+Date:   Sat Jan 13 21:53:33 2024 +0200
+
+    update loading page
+
+[33mcommit 7e4fa1bc7ee7e353b66fe413b0d01dddc272002d[m
+Author: Mostafa AbdElmogod <mostafa-for-work@hotmail.com>
+Date:   Sat Jan 13 21:47:21 2024 +0200
+
+    update
+
+[33mcommit c6f25c62fa29ea30a37a7f11ca452a7742892ef1[m
+Author: Mostafa AbdElmogod <mostafa-for-work@hotmail.com>
+Date:   Fri Jan 12 02:26:38 2024 +0200
+
+    update loading page
+
+[33mcommit c345060ab4a7a0a6c2af193d4ecc04e4963a3246[m
+Author: Mostafa AbdElmogod <mostafa-for-work@hotmail.com>
+Date:   Fri Jan 12 01:58:04 2024 +0200
+
+    loading page
+
+[33mcommit 941cd572dc185b06e337d04253d11d67eb526cee[m
+Author: Mostafa AbdElmogod <mostafa-for-work@hotmail.com>
+Date:   Fri Jan 12 01:39:21 2024 +0200
+
+    details section
+
+[33mcommit dd3562b93d794c37acd69ce000d97369cf8d3bf6[m
+Author: Mostafa AbdElmogod <mostafa-for-work@hotmail.com>
+Date:   Fri Jan 12 01:29:01 2024 +0200
+
+    update control section
+
+[33mcommit a81ba84ad05cd89b22edbc9ee713984ef4b5eb3c[m
+Author: Mostafa AbdElmogod <mostafa-for-work@hotmail.com>
+Date:   Fri Jan 12 00:22:40 2024 +0200
+
+    add control section
+
+[33mcommit aab9cf28e3774e2bc7b58a7eecc760c70641ad43[m
+Author: Mostafa AbdElmogod <mostafa-for-work@hotmail.com>
+Date:   Thu Jan 11 22:49:52 2024 +0200
+
+    customize cock page
+
+[33mcommit e2e4793c8f5f4bd766eabfa23453b485af3471a7[m
+Author: Mostafa AbdElmogod <mostafa-for-work@hotmail.com>
+Date:   Thu Jan 11 22:16:32 2024 +0200
+
+    home page
+
+[33mcommit 5682a0b95a3cf8ee01c96c8c83a6de2e68201547[m
+Author: Mostafa AbdElmogod <mostafa-for-work@hotmail.com>
+Date:   Thu Jan 11 21:18:51 2024 +0200
+
+    customize enviroment
+
+[33mcommit baa6a11adaf021b4201072af2c58d84dcdaa14ce[m
+Author: Mostafa AbdElmogod <mostafa-for-work@hotmail.com>
+Date:   Sun Jan 7 07:59:48 2024 +0200
+
+    customize environment
+
+[33mcommit 2a6d32c49840410d5357f9a16d325496fdd495a8[m
+Author: Mostafa AbdElmogod <155806017+mostafa-abd@users.noreply.github.com>
+Date:   Sun Jan 7 12:09:14 2024 +0200
+
+    Initial commit
