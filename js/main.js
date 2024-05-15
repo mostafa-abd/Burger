@@ -10,6 +10,7 @@ let main = document.createElement("main"),
 
 // append elements ( home page)
 
+
 main.append(left, img, span);
 left.appendChild(div);
 div.appendChild(divTextNode);
